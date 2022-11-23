@@ -81,3 +81,18 @@ export TIMEINTERVAL="5"
 Run your script with the following command:
 
 **python3 ./azuresqltest.py**
+
+If successful connection, it will output the following:
+
+```
+Starting AzureSQL Connectivity Check: ... 
+Successful Connected to Azure SQL
+```
+
+Otherwise, it will throw an error like this:
+
+```
+Starting AzureSQL Connectivity Check:...
+10/11/2022 14:50:53 A MSSQLDriverException has been caught.
+```
+It will also log the requests in a local file on Pod, azsqltest.log. For data persistency please mount an emptyDir and share the script's folder with the underlying Node.
