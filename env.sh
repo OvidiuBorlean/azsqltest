@@ -1,0 +1,5 @@
+export SQLSERVER="YourSQLServer"
+export SQLUSER="SQLUSER.database.windows.net"
+export SQLPASS="YourSQLPassword"
+export SQLDB="YourSQLDB"
+export TIMEINTERVAL="5"
