@@ -68,3 +68,16 @@ if __name__ == '__main__':
     time.sleep(int(interval))
 EOF
 ```
+Adding the Environment Variables that holds our SQL endpoint, username, password and database name along with the time interval in second:
+
+```
+export SQLSERVER="yourslqname.database.windows.net"
+export SQLUSER="yourskluser@yoursqlname.database.windows.net"
+export SQLPASS="yoursqlpassword"
+export SQLDB="yousql_db_name"
+export TIMEINTERVAL="5"
+```
+
+Run your script with the following command:
+
+**python3 ./azuresqltest.py**
