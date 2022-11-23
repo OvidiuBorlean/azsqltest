@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: azuresqltest
+  name: azuresqltest
+spec:
+  containers:
+  - image: nginx
+    name: azuresqltest
+    command: ["/bin/bash"]
+    args: ["-c", "apt update && apt install python3 python3-pip nano -y && pip install pymssql && sleep 3600"]
+    resources:
+      requests:
+        memory: "1024Mi"
+        cpu: "650m"
+      limits:
+        memory: "2048Mi"
+        cpu: "1000m"
+
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
